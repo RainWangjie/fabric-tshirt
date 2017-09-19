@@ -10,7 +10,7 @@ var os = require('os'),
     path = require('path'),
     opn = require('opn'),
     server = require('http').createServer(app),
-    QRCode = require("qrcode-svg");
+    QRCode = require("qrcode-terminal");
 
 var localhost = '',
     port = process.env.PORT || 9100;
@@ -21,25 +21,17 @@ try {
 } catch (e) {
     localhost = 'localhost';
 }
-var url = 'http://' + localhost + ':' + port,
-    hello = new QRCode(url),
-    modules = hello.qrcode.modules,
-    ascii = '\t\t',
-    length = modules.length;
-for (var y = 0; y < length; y++) {
-    for (var x = 0; x < length; x++) {
-        var module = modules[x][y];
-        ascii += (module ? 'x' : ' ');
-    }
-    ascii += '\r\n\t\t';
-}
 
+// Terminal内绘制二维码
+var url = 'http://' + localhost + ':' + port;
+QRCode.setErrorLevel('Q');
+QRCode.generate(url);
+
+// 打开默认浏览器
 server.listen(port, function () {
-    console.log('success:', url);
-    console.log(ascii);
+    console.log('连接同一wifi下打开or扫码：', url);
     opn(url);
 });
-
 
 app.use(express.static(path.join(__dirname, 'src')));
 
