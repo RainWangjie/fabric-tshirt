@@ -3,6 +3,7 @@
 /.vscode
 /node_modules
 web.config
+package-lock.json
 ####################################
 ######## OS generated files ########
 ####################################
