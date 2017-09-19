@@ -1,10 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+src<head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport"
+          content="user-scalable=0,width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>fabric.js定制按钮</title>
+    <style>
+        @font-face {
+            font-family: 'zoolsBlack';
+            src: url('../fonts/Zcool-Black.woff');
+        }
+
+        @font-face {
+            font-family: 'zoolsHappy';
+            src: url('../fonts/Zcool-Happy.woff');
+        }
+
+        @font-face {
+            font-family: 'zoolsItalic01';
+            src: url('../fonts/Italic01.ttf');
+        }
+
+        @font-face {
+            font-family: 'zoolsItalic02';
+            src: url('../fonts/Italic02.ttf');
+        }
+
+        body {
+            margin: 0;
+            /*text-align: center;*/
+        }
+
+        .main {
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .design-area {
+            margin: 0 auto;
+            position: relative;
+            background-image: url('https://www.teegether.cn/images/bgImages/tshirtShort_round_male_white_front.jpg');
+            background-size: 100% 100%;
+            transition: transform .3s;
+        }
+
+        .design-area.bigger {
+            transform-origin: 50% 50%;
+            transform: scale(1.7, 1.7);
+        }
+
+        #fabric_canvas {
+            border: 1px solid #323232;
+        }
+
+        .print-area {
+            position: absolute;
+            top: 24.43%;
+            left: 28.39%;
+            width: 43.54%;
+            height: 54.74%;
+            border: 1px dashed #323232;
+        }
+
+        .print-area:after {
+            content: '打印区域';
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            font-size: 10px;
+        }
+
+        #opreate {
+            position: fixed;
+            bottom: 0;
+            padding: 2px;
+            /*background: #fff;*/
+            width: 100%;
+        }
+
+        #word {
+            width: 40px;
+        }
+
+        .canvas-container {
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 5px;
+            border: 0;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .selecctedImg {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div class="main">
+    <div class="design-area">
+        <div class="print-area">
+
+        </div>
+        <canvas id="fabric_canvas"></canvas>
+    </div>
+    <div id="opreate" class="show">
+        <label>
+            添加图片:
+            <button class="choose-photo" data-id="bear" value="../images/bear.jpg">bear</button>
+            <button class="choose-photo" data-id="kobe" value="../images/11-2.jpg">kobe</button>
+            <button class="choose-photo" data-id="chicken" value="../images/chicken.png">chicken</button>
+            <button class="choose-photo" data-id="cat" value="../images/cat.jpg">cat</button>
+        </label>
+        <br>
+        <label>
+            添加文字：
+            <input type="text" id="word">
+            <input type="color" id="color">
+            <select id="font_family">
+                <option value="">选择字体</option>
+                <option value="zoolsBlack">站酷黑体</option>
+                <option value="zoolsHappy">站酷Happy</option>
+                <option value="zoolsItalic01">zoolsItalic01</option>
+                <option value="zoolsItalic02">zoolsItalic02</option>
+            </select>
+            <button id="addWord">+</button>
+        </label>
+        <br>
+        <label>
+            模版选中：
+            <button class="moban" data-moban="1">模版1</button>
+            <button class="moban" data-moban="2">模版2</button>
+            <button class="moban" data-moban="3">模版3</button>
+            <button class="moban" data-moban="4">模版4</button>
+            <button class="moban" data-moban="5">模版5</button>
+            <button class="moban" data-moban="0">取消</button>
+        </label>
+        <br>
+        <button onclick="window.location.reload()">reload</button>
+        <button class="getActiveObject">获取选中对象</button>
+        <button class="big_small">缩放</button>
+        <button class="submit_img">提交</button>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="fabric.min.js"></script>
+<script type="text/javascript" src="mask.js"></script>
+<script type="text/javascript" src="customiseControls.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
