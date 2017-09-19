@@ -118,25 +118,25 @@ fabric.Object.prototype.customiseCornerIcons({
         cornerBackgroundColor: 'black'
     },
     tl: {
-        icon: '../images/icons/rotate.svg'
+        icon: '/images/icons/rotate.svg'
     },
     tr: {
-        icon: '../images/icons/resize.svg'
+        icon: '/images/icons/resize.svg'
     },
     bl: {
-        icon: '../images/icons/remove.svg'
+        icon: '/images/icons/remove.svg'
     },
     br: {
-        icon: '../images/icons/up.svg'
+        icon: '/images/icons/up.svg'
     },
     mb: {
-        icon: '../images/icons/down.svg'
+        icon: '/images/icons/down.svg'
     },
     ml: {
-        icon: '../images/icons/diagonal-resize.svg'
+        icon: '/images/icons/diagonal-resize.svg'
     },
     mr: {
-        icon: '../images/icons/diagonal-resize.svg'
+        icon: '/images/icons/diagonal-resize.svg'
     }
 });
 
@@ -231,10 +231,10 @@ function setObject(object, setFun) {
             cornerPadding: 10
         },
         mt: {
-            icon: '../images/icons/acute.svg'
+            icon: '/images/icons/acute.svg'
         },
         mr: {
-            icon: '../images/icons/repair-tools-cross.svg'
+            icon: '/images/icons/repair-tools-cross.svg'
         }
     }, function () {
         canvas.renderAll();
