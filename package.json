@@ -1,0 +1,28 @@
+{
+  "name": "fabric-tshirt",
+  "version": "1.0.0",
+  "description": "基于fabric的T恤设计",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "opn": "^5.1.0"
+  },
+  "devDependencies": {
+    "qrcode-svg": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RainWangjie/fabric-tshirt.git"
+  },
+  "author": "Mr.Rain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RainWangjie/fabric-tshirt/issues"
+  },
+  "homepage": "https://github.com/RainWangjie/fabric-tshirt#readme"
+}

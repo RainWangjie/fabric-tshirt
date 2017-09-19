@@ -1,102 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-src<head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="user-scalable=0,width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>fabric.js定制按钮</title>
-    <style>
-        @font-face {
-            font-family: 'zoolsBlack';
-            src: url('../fonts/Zcool-Black.woff');
-        }
-
-        @font-face {
-            font-family: 'zoolsHappy';
-            src: url('../fonts/Zcool-Happy.woff');
-        }
-
-        @font-face {
-            font-family: 'zoolsItalic01';
-            src: url('../fonts/Italic01.ttf');
-        }
-
-        @font-face {
-            font-family: 'zoolsItalic02';
-            src: url('../fonts/Italic02.ttf');
-        }
-
-        body {
-            margin: 0;
-            /*text-align: center;*/
-        }
-
-        .main {
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .design-area {
-            margin: 0 auto;
-            position: relative;
-            background-image: url('https://www.teegether.cn/images/bgImages/tshirtShort_round_male_white_front.jpg');
-            background-size: 100% 100%;
-            transition: transform .3s;
-        }
-
-        .design-area.bigger {
-            transform-origin: 50% 50%;
-            transform: scale(1.7, 1.7);
-        }
-
-        #fabric_canvas {
-            border: 1px solid #323232;
-        }
-
-        .print-area {
-            position: absolute;
-            top: 24.43%;
-            left: 28.39%;
-            width: 43.54%;
-            height: 54.74%;
-            border: 1px dashed #323232;
-        }
-
-        .print-area:after {
-            content: '打印区域';
-            position: absolute;
-            left: 0;
-            bottom: -20px;
-            font-size: 10px;
-        }
-
-        #opreate {
-            position: fixed;
-            bottom: 0;
-            padding: 2px;
-            /*background: #fff;*/
-            width: 100%;
-        }
-
-        #word {
-            width: 40px;
-        }
-
-        .canvas-container {
-            margin: 0 auto;
-        }
-
-        button {
-            padding: 5px;
-            border: 0;
-            border-radius: 5px;
-            margin: 10px;
-        }
-
-        .selecctedImg {
-            display: none;
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="main.css">
 </head>
 <body>
 <div class="main">
