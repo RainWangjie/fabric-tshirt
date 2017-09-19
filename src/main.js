@@ -118,25 +118,25 @@ fabric.Object.prototype.customiseCornerIcons({
         cornerBackgroundColor: 'black'
     },
     tl: {
-        icon: '/images/icons/rotate.svg'
+        icon: '/icons/rotate.svg'
     },
     tr: {
-        icon: '/images/icons/resize.svg'
+        icon: '/icons/resize.svg'
     },
     bl: {
-        icon: '/images/icons/remove.svg'
+        icon: '/icons/remove.svg'
     },
     br: {
-        icon: '/images/icons/up.svg'
+        icon: '/icons/up.svg'
     },
     mb: {
-        icon: '/images/icons/down.svg'
+        icon: '/icons/down.svg'
     },
     ml: {
-        icon: '/images/icons/diagonal-resize.svg'
+        icon: '/icons/diagonal-resize.svg'
     },
     mr: {
-        icon: '/images/icons/diagonal-resize.svg'
+        icon: '/icons/diagonal-resize.svg'
     }
 });
 
@@ -231,10 +231,10 @@ function setObject(object, setFun) {
             cornerPadding: 10
         },
         mt: {
-            icon: '/images/icons/acute.svg'
+            icon: '/icons/acute.svg'
         },
         mr: {
-            icon: '/images/icons/repair-tools-cross.svg'
+            icon: '/icons/repair-tools-cross.svg'
         }
     }, function () {
         canvas.renderAll();
@@ -276,7 +276,7 @@ $('.submit_img').click(function () {
     });
 });
 
-//模版
+// 模版
 $('.moban').click(function () {
     var id = $(this).attr('data-moban');
     if (id !== '0') {
@@ -336,7 +336,8 @@ function addWord(text) {
     });
     setObject(word)
 }
-//辅助圆drawRotationCircle
+
+// 辅助圆drawRotationCircle
 var assistWord, assistCircle;
 function drawRotationCircle(t) {
     //t:fabric.object
@@ -397,7 +398,8 @@ function autoAngle(t) {
     n < 5 && t.setAngle(angle - n);
     n > 40 && t.setAngle(angle + 45 - n);
 }
-//辅助线
+
+// 辅助线
 function drawHorizontalCenterLine() {
     horizontalCenterLine = new fabric.Line([0, print.center.y, canvas_w, print.center.y], {
         stroke: "#00B2A5",
@@ -426,14 +428,15 @@ function removeVerticalCenterLine() {
     canvas.remove(verticalCenterLine);
     verticalCenterLine = '';
 }
-//清除辅助
+
+// 清除辅助
 function clearOther() {
     removeRotationCircle();
     removeHorizontalCenterLine();
     removeVerticalCenterLine();
 }
 
-//mask操作
+// mask操作
 function useMask(object) {
     object.filters[0] = (new fabric.Image.filters.MaskUp({
         'mask': maskImg
