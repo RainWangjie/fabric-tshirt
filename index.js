@@ -29,7 +29,7 @@ QRCode.generate(url);
 
 // 打开默认浏览器
 server.listen(port, function () {
-    console.log('连接同一wifi下打开or扫码：4', url);
+    console.log('连接同一wifi下打开or扫码：', url);
     opn(url);
 });
 
