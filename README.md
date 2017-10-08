@@ -3,7 +3,7 @@
 
 #### 克隆项目
 
-```git clone git@github.com:RainWangjie/fabric-tshirt.git```
+```git clone https://github.com/RainWangjie/fabric-tshirt.git```
 
 #### 安装相关依赖
 
